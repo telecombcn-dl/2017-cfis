@@ -6,7 +6,7 @@ ipython==5.2.2
 notebook==4.4.1
 keras==1.2.1
 tqdm==4.11.2
-cython==0.25.2
 opencv-python==3.2.0.6
 easydict==1.6
 imageio==2.1.2
+h5py==2.6.0
