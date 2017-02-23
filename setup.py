@@ -1,3 +1,4 @@
+import tensorflow as tf
 from keras.datasets import mnist, cifar10
 from keras.applications.vgg16 import VGG16
 import time
