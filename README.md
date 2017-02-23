@@ -67,9 +67,11 @@ pip install tensorflow-gpu
 }
 ```
 
-## Setup
+## Setup & Check installation
 
 Run ``` python setup.py``` to collect datasets and models before we begin, to avoid problems if notebooks freeze at some point.
+
+If you successfully run ```setup.py```, you are all set for the lab sessions ! If not, please let us know in the issues section and we will try to help you.
 
 ## Sessions
 
