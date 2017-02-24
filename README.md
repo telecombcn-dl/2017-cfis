@@ -28,6 +28,7 @@ Follow the instructions for your OS to install tensorflow. It is recommended tha
 
 - Follow [these instructions](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation) to install tensorflow with pip.
 - Install other dependencies with ```pip install -r requirements.txt```
+
 #### Windows
 
 - Install [Anaconda3-4.2.0 X64](https://repo.continuum.io/archive/Anaconda3-4.2.0-Windows-x86_64.exe). It is important that you download this exact version of Anaconda. Otherwise tensorflow installation will likely fail.
@@ -38,10 +39,10 @@ Follow the instructions for your OS to install tensorflow. It is recommended tha
 ```shell
 conda install conda=4.2.11
 conda create -n tf python=3.5
+activate tf
 conda install jupyter
 conda install h5py
 conda install scipy
-activate tf
 ```
 
 - Install Tensorflow:
@@ -53,8 +54,8 @@ pip install tensorflow
 pip install tensorflow-gpu
 ```
 
-At the beginning of every session, you must run ```activate tf``` before running the notebooks.
 - Install other dependencies ```pip install -r requirements_win.txt```
+- Note that at the beginning of every session, you must run ```activate tf``` before running the notebooks.
 
 
 ## Setup & Check installation
@@ -77,3 +78,5 @@ All sessions will be run in IPython notebook. To start editing them run:
 ```shell
 jupyter notebook
 ```
+
+Then navigate to ```localhost:8888``` and start editing.
