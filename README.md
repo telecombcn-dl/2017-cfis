@@ -20,14 +20,14 @@ This repository contains several ipython notebooks with machine learning tutoria
 - Linux and MacOSX users: python 2.7 and 3.x are supported. Install from [official website](https://www.python.org/) or use [Anaconda](https://www.continuum.io/downloads)
 - Windows users: only Anaconda with python 3.5 is supported (follow detailed steps below).
 
-### Tensorflow
+### Dependencies
 
 Follow the instructions for your OS to install tensorflow. It is recommended that you install the CPU version of tensorflow, since the GPU version requires cuda and cudnn installed. If you are feeling adventurous and have a GPU, you can follow the instructions in the tensorflow website to do the installation of the GPU version.
 
 #### Linux & Mac OS X
 
-Follow [these instructions](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation) to install tensorflow with pip.
-
+- Follow [these instructions](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation) to install tensorflow with pip.
+- Install other dependencies with ```pip install -r requirements.txt```
 #### Windows
 
 - Install [Anaconda3-4.2.0 X64](https://repo.continuum.io/archive/Anaconda3-4.2.0-Windows-x86_64.exe). It is important that you download this exact version of Anaconda. Otherwise tensorflow installation will likely fail.
@@ -37,10 +37,10 @@ Follow [these instructions](https://github.com/tensorflow/tensorflow/blob/master
 
 ```shell
 conda install conda=4.2.11
+conda create -n tf python=3.5
 conda install jupyter
 conda install h5py
 conda install scipy
-conda create -n tf python=3.5
 activate tf
 ```
 
@@ -53,33 +53,21 @@ pip install tensorflow
 pip install tensorflow-gpu
 ```
 
-### Other packages
+At the beginning of every session, you must run ```activate tf``` before running the notebooks.
+- Install other dependencies ```pip install -r requirements_win.txt```
 
-- Install other dependencies ```pip install -r requirements.txt```.
-- Set the keras backend to tensorflow in ```~/.keras/keras.json```:
-
-```json
-{
-    "image_dim_ordering": "tf", 
-    "epsilon": 1e-07, 
-    "floatx": "float32", 
-    "backend": "tensorflow"
-}
-```
 
 ## Setup & Check installation
 
 Run ``` python setup.py``` to collect datasets and models before we begin, to avoid problems if notebooks freeze at some point.
-
 If you successfully run ```setup.py```, you are all set for the lab sessions ! If not, please let us know in the issues section and we will try to help you.
 
 ## Sessions
 
-- [Deep Networks](sessions/deep.ipynb)
+- [Deep Networks](sessions/mlp.ipynb)
 - [Convolutional Neural Networks](sessions/convnets.ipynb)
 - [Visualization](sessions/visualization.ipynb)
 - [Deep Dream](sessions/dream.ipynb)
-- [Neural Style](sessions/style.ipynb)
 
 
 ## Usage
@@ -89,7 +77,3 @@ All sessions will be run in IPython notebook. To start editing them run:
 ```shell
 jupyter notebook
 ```
-
-## Deprecated
-
-- [Binary SVM](sessions/binarysvm.ipynb)
